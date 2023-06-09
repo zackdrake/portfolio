@@ -1,0 +1,6 @@
+<div class="testimonials" *ngIf="testimonials.length">
+  <div *ngFor="let testimonial of testimonials" class="testimonial">
+    <div class="testimonial-name">{{ testimonial.name }}</div>
+    <div class="testimonial-message">{{ testimonial.message }}</div>
+  </div>
+</div>

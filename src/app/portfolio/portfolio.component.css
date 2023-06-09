@@ -1,0 +1,22 @@
+.filter-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.filter-container button {
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-container button:hover,
+.filter-container button.selected {
+  background-color: #555;
+}
+
+.project-card.hidden {
+  display: none;
+}

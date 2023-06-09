@@ -1,0 +1,28 @@
+<div
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  fxLayoutGap="20px"
+  class="header"
+>
+  <img src="assets/photocv_nobg.png" alt="Your Name" class="profile-image" />
+  <h1>Payet Benjamin</h1>
+  <p>{{ "jobTitle" | translate }}</p>
+
+  <!-- <app-back-to-top-button></app-back-to-top-button> -->
+  <router-outlet></router-outlet>
+  <app-pop-up-menu></app-pop-up-menu>
+
+  <h1>{{ title }}</h1>
+
+  <div class="projects-container">
+    <section class="projects" *ngFor="let project of projects">
+      <h2>{{ project.title }}</h2>
+      <p>{{ project.description }}</p>
+      <a [href]="project.link" target="_blank">View Project</a>
+    </section>
+  </div>
+
+  <app-cta></app-cta>
+</div>
+<app-slideshow></app-slideshow>
+<app-testimonials></app-testimonials>

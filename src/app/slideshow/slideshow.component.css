@@ -1,0 +1,61 @@
+.slideshow {
+  position: relative;
+  width: 100%;
+}
+
+.slideshow img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px;
+  z-index: 2;
+}
+
+.controls .arrow {
+  font-size: 10rem;
+  color: rgba(255, 255, 255, 0.4);
+  align-self: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.controls .dots {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.controls .dots button {
+  width: 15px;
+  height: 15px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.controls .dots button.active {
+  background: #fff;
+}
+
+.slideshow img.hidden {
+  display: none;
+}

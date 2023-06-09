@@ -1,0 +1,19 @@
+<div class="projects-container">
+  <div class="project" *ngFor="let project of projects">
+    <h3>{{ project.title }}</h3>
+    <img
+      [src]="project.image"
+      alt="{{ project.title }}"
+      class="project-image"
+    />
+    <p>{{ project.description }}</p>
+    <p>
+      <strong>Problem:</strong> {{ project.problem }}<br />
+      <strong>Tools & Technologies:</strong> {{ project.tools }}<br />
+      <strong>Results:</strong> {{ project.results }}
+    </p>
+    <a [href]="project.link" target="_blank" rel="noopener noreferrer"
+      >View Project</a
+    >
+  </div>
+</div>

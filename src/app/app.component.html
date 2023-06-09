@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programmer Portfolio</title>
+  </head>
+  <app-preloader></app-preloader>
+
+  <body [class.dark-mode]="isDarkMode">
+    <header>
+      <mat-toolbar class="seamless-toolbar" color="primary">
+        <a
+          mat-button
+          routerLink="/"
+          pageScroll
+          (mouseenter)="onMouseEnter($event)"
+          (mouseleave)="onMouseLeave($event)"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          style="font-size: xx-large"
+          >Home</a
+        >
+        <a
+          mat-button
+          routerLink="/about"
+          pageScroll
+          (mouseenter)="onMouseEnter($event)"
+          (mouseleave)="onMouseLeave($event)"
+          routerLinkActive="active"
+          style="font-size: xx-large"
+          >About</a
+        >
+        <a
+          mat-button
+          routerLink="/portfolio"
+          pageScroll
+          (mouseenter)="onMouseEnter($event)"
+          (mouseleave)="onMouseLeave($event)"
+          routerLinkActive="active"
+          style="font-size: xx-large"
+          >Portfolio</a
+        >
+        <a
+          mat-button
+          routerLink="/articles"
+          pageScroll
+          (mouseenter)="onMouseEnter($event)"
+          (mouseleave)="onMouseLeave($event)"
+          routerLinkActive="active"
+          style="font-size: xx-large"
+          >Articles</a
+        >
+        <a
+          mat-button
+          routerLink="/contact"
+          pageScroll
+          (mouseenter)="onMouseEnter($event)"
+          (mouseleave)="onMouseLeave($event)"
+          routerLinkActive="active"
+          style="font-size: xx-large"
+          >Contact</a
+        >
+      </mat-toolbar>
+    </header>
+
+    <span class="spacer"></span>
+    <button class="light-bulb" (click)="toggleDarkMode()">
+      <img
+        [src]="
+          isDarkMode ? 'assets/light-bulb-off.svg' : 'assets/light-bulb-on.svg'
+        "
+        alt="Light mode toggle"
+      />
+    </button>
+    <button
+      mat-icon-button
+      class="translation-button"
+      (click)="switchLanguage()"
+    >
+      <div>{{ currentLanguage === "en" ? "EN" : "FR" }}</div>
+    </button>
+
+    <main>
+      <router-outlet></router-outlet>
+
+      <app-back-to-top></app-back-to-top>
+    </main>
+
+    <footer>
+      <app-footer></app-footer>
+      <p>Contact: {{ "contactEmail" | translate }}</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<div class="image-wrapper">
+  <img
+    [src]="src"
+    alt="{{ alt }}"
+    (load)="onImageLoad()"
+    [ngClass]="{ loaded: isLoaded }"
+  />
+  <div
+    class="spinner"
+    *ngIf="!isLoaded"
+    [ngStyle]="{ 'background-color': backgroundColor }"
+  >
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+  </div>
+</div>

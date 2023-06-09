@@ -1,0 +1,14 @@
+.about-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.about-me-text {
+  flex: 1;
+  margin-right: 2em;
+}
+
+.personal-info {
+  flex: 1;
+}

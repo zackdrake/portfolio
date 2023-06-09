@@ -1,0 +1,26 @@
+<section id="portfolio">
+  <div class="project" tooltip="Project 1" placement="top">
+    <app-loading-image
+      src="assets/images/project1.jpg"
+      alt="Project 1"
+      backgroundColor="#222"
+    ></app-loading-image>
+    <div class="project-info">
+      <h3>Project 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+
+  <!--
+  <div class="filter-container">
+    <button *ngFor="let category of categories" [class.selected]="category === selectedCategory" (click)="filterProjects(category)">
+      {{ category }}
+    </button>
+  </div>
+  <div class="projects-container">
+    <div *ngFor="let project of projects" class="project-card" [class.hidden]="selectedCategory !== 'All' && project.category !== selectedCategory">
+
+    </div>
+  </div>
+  ... -->
+</section>

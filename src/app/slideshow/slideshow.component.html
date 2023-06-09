@@ -1,0 +1,24 @@
+<div
+  class="slideshow"
+  *ngIf="images.length"
+  (mouseover)="isHovering = true"
+  (mouseout)="isHovering = false"
+>
+  <img
+    *ngFor="let image of images; let i = index"
+    [src]="image.url"
+    [@slide]="i === currentImageIndex ? 'in' : 'out'"
+    [class.hidden]="i !== currentImageIndex"
+  />
+  <div class="controls">
+    <button class="arrow left" (click)="previousImage()">&#8249;</button>
+    <div class="dots">
+      <button
+        *ngFor="let image of images; let i = index"
+        [class.active]="i === currentImageIndex"
+        (click)="selectImage(i)"
+      ></button>
+    </div>
+    <button class="arrow right" (click)="nextImage()">&#8250;</button>
+  </div>
+</div>

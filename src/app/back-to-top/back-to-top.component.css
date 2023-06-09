@@ -1,0 +1,17 @@
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+.back-to-top.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
