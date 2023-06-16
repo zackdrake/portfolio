@@ -34,6 +34,9 @@ import { RubiksCubeComponent } from './rubiks-cube/rubiks-cube.component';
 import { PopUpMenuComponent } from './pop-up-menu/pop-up-menu.component';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import { SearchComponent } from './search/search.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatMenuModule} from "@angular/material/menu";
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -62,26 +65,29 @@ export function HttpLoaderFactory(http: HttpClient) {
     SlideshowComponent,
     SearchComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    NgxPageScrollModule,
-    MatProgressBarModule,
-    MatIconModule,
-    MatDialogModule,
-    FormsModule,
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
-      },
-    }),
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatButtonModule,
+        NgxPageScrollModule,
+        MatProgressBarModule,
+        MatIconModule,
+        MatDialogModule,
+        FormsModule,
+        HttpClientModule,
+        FlexLayoutModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient],
+            },
+        }),
+        MatSidenavModule,
+        MatMenuModule,
+    ],
   providers: [],
   bootstrap: [AppComponent],
 })
