@@ -7,9 +7,14 @@
   </head>
   <app-preloader></app-preloader>
 
-  <body [class.dark-mode]="isDarkMode">
-    <header>
-      <mat-toolbar class="seamless-toolbar" color="primary">
+
+  <header class="sticky-header" [class.dark-mode]="isDarkMode">
+    <mat-toolbar class="seamless-toolbar {{isActive('/')}}" color="primary">
+      <div class="header-title" style="color: #1f1f1f; margin-right: 20px;">
+        <h1>Benjamin Payet</h1>
+      </div>
+
+      <div fxHide fxShow.gt-sm> <!-- This will hide on screens smaller than medium -->
         <a
           mat-button
           routerLink="/"
@@ -19,7 +24,7 @@
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }"
           style="font-size: xx-large"
-          >Home</a
+        >Home</a
         >
         <a
           mat-button
@@ -29,7 +34,7 @@
           (mouseleave)="onMouseLeave($event)"
           routerLinkActive="active"
           style="font-size: xx-large"
-          >About</a
+        >About</a
         >
         <a
           mat-button
@@ -39,7 +44,7 @@
           (mouseleave)="onMouseLeave($event)"
           routerLinkActive="active"
           style="font-size: xx-large"
-          >Portfolio</a
+        >Portfolio</a
         >
         <a
           mat-button
@@ -49,7 +54,7 @@
           (mouseleave)="onMouseLeave($event)"
           routerLinkActive="active"
           style="font-size: xx-large"
-          >Articles</a
+        >Articles</a
         >
         <a
           mat-button
@@ -59,27 +64,47 @@
           (mouseleave)="onMouseLeave($event)"
           routerLinkActive="active"
           style="font-size: xx-large"
-          >Contact</a
+        >Contact</a
         >
-      </mat-toolbar>
-    </header>
+      </div>
 
-    <span class="spacer"></span>
-    <button class="light-bulb" (click)="toggleDarkMode()">
-      <img
-        [src]="
-          isDarkMode ? 'assets/light-bulb-off.svg' : 'assets/light-bulb-on.svg'
-        "
-        alt="Light mode toggle"
-      />
-    </button>
-    <button
-      mat-icon-button
-      class="translation-button"
-      (click)="switchLanguage()"
-    >
-      <div>{{ currentLanguage === "en" ? "EN" : "FR" }}</div>
-    </button>
+      <div fxShow fxHide.gt-sm> <!-- This will show on small screens and hide on screens wider than small -->
+        <button mat-button [matMenuTriggerFor]="menu">
+          Menu
+        </button>
+        <mat-menu #menu="matMenu"> <!-- This is the menu for small screens -->
+          <button mat-menu-item routerLink="/">Home</button>
+          <button mat-menu-item routerLink="/about">About</button>
+          <button mat-menu-item routerLink="/portfolio">Portfolio</button>
+          <button mat-menu-item routerLink="/articles">Articles</button>
+          <button mat-menu-item routerLink="/contact">Contact</button>
+        </mat-menu>
+      </div>
+
+      <button class="light-bulb" (click)="toggleDarkMode()">
+        <img
+          [src]="
+      isDarkMode ? 'assets/light-bulb-off.svg' : 'assets/light-bulb-on.svg'
+    "
+          alt="Light mode toggle"
+        />
+      </button>
+      <button
+        mat-icon-button
+        class="translation-button"
+        (click)="switchLanguage()"
+      >
+        <div>{{ currentLanguage === "en" ? "EN" : "FR" }}</div>
+      </button>
+
+    </mat-toolbar>
+  </header>
+
+
+
+  <body >
+
+    <br>
 
     <main>
       <router-outlet></router-outlet>

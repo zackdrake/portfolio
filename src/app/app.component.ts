@@ -5,8 +5,11 @@ import {
   NavigationEnd,
   NavigationError,
 } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import { filter, map, shareReplay } from 'rxjs/operators';
 import { TranslateService } from '@ngx-translate/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+
 
 interface Project {
   title: string;
@@ -37,11 +40,18 @@ export class AppComponent {
     },
   ];
 
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
+
   constructor(
     private router: Router,
     private renderer: Renderer2,
     private el: ElementRef,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private breakpointObserver: BreakpointObserver
   ) {
     translate.setDefaultLang('en');
     this.router.events
@@ -74,6 +84,10 @@ export class AppComponent {
 
   toggleDarkMode(): void {
     this.isDarkMode = !this.isDarkMode;
+  }
+
+  isActive(route: string) {
+    return this.router.url === route ? 'active-link' : '';
   }
 
   onMouseEnter(event: MouseEvent): void {
