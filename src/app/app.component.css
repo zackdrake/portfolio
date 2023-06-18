@@ -11,7 +11,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  padding: 15px;
+  padding-top: 90px;
 }
 
 body.dark-mode {
@@ -19,7 +19,7 @@ body.dark-mode {
   color: #ffffff;
 }
 
-body.dark-mode header {
+header.dark-mode header {
   background-color: transparent;
 }
 
@@ -103,6 +103,7 @@ footer {
 }
 
 body:not(.dark-mode) {
+  display: flex;
   background-color: #e1e3e4;
   color: #1f1f1f;
 }
@@ -148,7 +149,7 @@ body:not(.dark-mode) footer {
   position: relative;
 }
 
-.seamless-toolbar.dark-mode {
+header.dark-mode .seamless-toolbar {
   margin: 0;
   padding: 0;
   display: flex;
@@ -164,7 +165,7 @@ a.active::after {
   display: block;
   width: 100%;
   height: 3px; /* Adjust as needed */
-  background-color: blue; /* Adjust as needed */
+  background-color: #006190; /* Adjust as needed */
   position: absolute;
   bottom: -10px;
 }
@@ -174,5 +175,16 @@ a.active::after {
   top: 0;
   width: 100%;
   z-index: 1000;
+}
 
+.header-title:not(.dark-mode){
+  display: flex;
+  color: #1f1f1f;
+  margin-right: 20px;
+}
+
+header.dark-mode .header-title{
+  display: flex;
+  color: #ffffff;
+  margin-right: 20px;
 }

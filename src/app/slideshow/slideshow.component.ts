@@ -29,15 +29,15 @@ export class SlideshowComponent implements OnInit {
   firstImageDisplayed = false;
   images = [
     {
-      url: 'https://static.billboard.com/files/2021/03/Taylor-Swift-grammys-2021-billboard-1548-1616425628-compressed.jpg',
+      url: 'https://media.discordapp.net/attachments/827319877152538627/1119671921345318932/Untitled-3.png',
       firstLoad: true,
     },
     {
-      url: 'https://www.rollingstone.com/wp-content/uploads/2019/12/TaylorSwiftTimIngham.jpg',
+      url: 'https://media.discordapp.net/attachments/827319877152538627/1119673281985904670/Untitled-2.png',
       firstLoad: true,
     },
     {
-      url: 'https://static01.nyt.com/images/2023/03/30/multimedia/30popcast-hctw/30popcast-hctw-videoSixteenByNine3000.jpg',
+      url: 'https://media.discordapp.net/attachments/827319877152538627/1119671920577761320/Untitled-1.png',
       firstLoad: true,
     },
   ];

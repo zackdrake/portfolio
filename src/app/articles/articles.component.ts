@@ -6,21 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./articles.component.css'],
 })
 export class ArticlesComponent implements OnInit {
-  articles = [
+  article1 =
     {
       title: 'Article 1',
       image: 'assets/article-1.jpg',
       summary: 'Summary of Article 1',
       link: 'https://example.com/article-1',
-    },
-    {
-      title: 'Article 2',
-      image: 'assets/article-2.jpg',
-      summary: 'Summary of Article 2',
-      link: 'https://example.com/article-2',
-    },
-    // Add more articles here
-  ];
+    };
 
   searchTerm = '';
 
