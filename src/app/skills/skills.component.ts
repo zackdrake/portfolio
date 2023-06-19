@@ -16,7 +16,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
 })
 export class SkillsComponent implements OnInit {
   skills = [
-    { name: 'HTML', level: 90 },
+    { name: 'HTML', level: 100 },
     { name: 'CSS', level: 85 },
     { name: 'JavaScript', level: 80 },
     // Add more skills here
