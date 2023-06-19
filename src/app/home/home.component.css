@@ -14,8 +14,8 @@ section.projects {
   padding: 1rem;
   border-radius: 0.5rem;
   width: 300px;
-  box-shadow: 0 4px 6px rebeccapurple;
-  border: 2px solid rebeccapurple;
+  box-shadow: 0 4px 6px #006190;
+  border: 2px solid #006190;
 }
 
 section.projects h2 {
@@ -28,7 +28,7 @@ section.projects p {
 }
 
 a {
-  color: rebeccapurple;
+  color: #006190;
   text-decoration: none;
 }
 

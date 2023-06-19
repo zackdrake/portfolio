@@ -8,11 +8,36 @@ import { Component, OnInit } from '@angular/core';
 export class ArticlesComponent implements OnInit {
   article1 =
     {
-      title: 'Article 1',
       image: 'assets/article-1.jpg',
-      summary: 'Summary of Article 1',
-      link: 'https://example.com/article-1',
     };
+  article2 =
+    {
+      image: 'assets/article-2.jpg',
+    }
+  article3 =
+    {
+      image: 'assets/article-3.jpg',
+    }
+  article4 =
+    {
+      image: 'assets/article-4.jpg',
+    }
+  article5 =
+    {
+      image: 'assets/article-5.jpg',
+    }
+  article6 =
+    {
+      image: 'assets/article-6.jpg',
+    }
+  article7 =
+    {
+      image: 'assets/article-7.jpg',
+    }
+  article8 =
+    {
+      image: 'assets/article-8.jpg',
+    }
 
   searchTerm = '';
 
@@ -20,7 +45,5 @@ export class ArticlesComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  searchArticles(term: string) {
-    this.searchTerm = term.toLowerCase();
-  }
+
 }

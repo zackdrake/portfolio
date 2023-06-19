@@ -34,7 +34,13 @@ export class HomeComponent {
       description: 'This is a description of project 2.',
       link: 'https://www.example.com/project2',
     },
+    {
+      title: 'Project 3',
+      description: 'This is a description of project 3.',
+      link: 'https://www.example.com/project3',
+    },
   ];
+  
 
   constructor(
     private router: Router,

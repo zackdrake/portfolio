@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Programmer Portfolio</title>
+    <title>{{ "portfolioMenu" | translate }}</title>
   </head>
   <app-preloader></app-preloader>
 
@@ -24,7 +24,7 @@
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }"
           style="font-size: xx-large"
-        >Home</a
+        >{{ "homeMenu" | translate }}</a
         >
         <a
           mat-button
@@ -34,7 +34,7 @@
           (mouseleave)="onMouseLeave($event)"
           routerLinkActive="active"
           style="font-size: xx-large"
-        >About</a
+        >{{ "aboutMenu" | translate }}</a
         >
         <a
           mat-button
@@ -44,7 +44,7 @@
           (mouseleave)="onMouseLeave($event)"
           routerLinkActive="active"
           style="font-size: xx-large"
-        >Portfolio</a
+        >{{ "portfolioMenu" | translate }}</a
         >
         <a
           mat-button
@@ -54,7 +54,7 @@
           (mouseleave)="onMouseLeave($event)"
           routerLinkActive="active"
           style="font-size: xx-large"
-        >Articles</a
+        >{{ "articlesMenu" | translate }}</a
         >
         <a
           mat-button
@@ -64,7 +64,7 @@
           (mouseleave)="onMouseLeave($event)"
           routerLinkActive="active"
           style="font-size: xx-large"
-        >Contact</a
+        >{{ "contactMenu" | translate }}</a
         >
       </div>
 
@@ -73,11 +73,11 @@
           Menu
         </button>
         <mat-menu #menu="matMenu"> <!-- This is the menu for small screens -->
-          <button mat-menu-item routerLink="/">Home</button>
-          <button mat-menu-item routerLink="/about">About</button>
-          <button mat-menu-item routerLink="/portfolio">Portfolio</button>
-          <button mat-menu-item routerLink="/articles">Articles</button>
-          <button mat-menu-item routerLink="/contact">Contact</button>
+          <button mat-menu-item routerLink="/">{{ "homeMenu" | translate }}</button>
+          <button mat-menu-item routerLink="/about">{{ "aboutMenu" | translate }}</button>
+          <button mat-menu-item routerLink="/portfolio">{{ "portfolioMenu" | translate }}</button>
+          <button mat-menu-item routerLink="/articles">{{ "ArticlesMenu" | translate }}</button>
+          <button mat-menu-item routerLink="/contact">{{ "contactMenu" | translate }}</button>
         </mat-menu>
       </div>
 
@@ -114,7 +114,7 @@
 
     <footer>
       <app-footer></app-footer>
-      <p>Contact: {{ "contactEmail" | translate }}</p>
+      <p><button routerLink="/contact">{{ "contactMenu" | translate }}</button></p>
     </footer>
   </body>
 </html>

@@ -11,7 +11,40 @@
   <!-- <app-back-to-top-button></app-back-to-top-button> -->
   <router-outlet></router-outlet>
 
+  <h1>{{ title }}</h1>
 
+  <div class="projects-container">
+    <section class="projects">
+      <img
+        src="assets/project1.png"
+        alt="{{ 'project1title' | translate }}"
+        class="project-image"
+      />
+      <h2>{{ "project1title" | translate }}</h2>
+      <p>{{ "project1description" | translate }}</p>
+
+    </section>
+    <section class="projects">
+      <img
+        src="assets/project2.png"
+        alt="{{ 'project2title' | translate }}"
+        class="project-image"
+      />
+      <h2>{{ "project2title" | translate }}</h2>
+      <p>{{ "project2description" | translate }}</p>
+
+    </section>
+    <section class="projects">
+      <img
+        src="assets/project3.png"
+        alt="{{ 'project3title' | translate }}"
+        class="project-image"
+      />
+      <h2>{{ "project2title" | translate }}</h2>
+      <p>{{ "project2description" | translate }}</p>
+
+    </section>
+  </div>
 
 
 
@@ -19,6 +52,4 @@
 </div>
 <app-slideshow></app-slideshow>
 
-<app-testimonials></app-testimonials>
 
-<app-cta></app-cta>
