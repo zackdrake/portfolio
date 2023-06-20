@@ -40,5 +40,11 @@
   "project3title": "Artificial Intelligence Developer",
   "project3description": "Development of AI solutions to assist companies in automating processes and improving operational efficiency. Use of technologies such as Python, TensorFlow, PyTorch, Pandas.",
   "backToTop": "Back to top",
-  "footer": "Benjamin Payet. All rights reserved."
+  "footer": "Benjamin Payet. All rights reserved.",
+  "portfolioproject1title": "MyPerfectList",
+  "portfolioproject1text": "MyPerfectList is a WEB platform that brings together various existing collections (IMDb, MAL, etc.) and allows the creation of new ones accessible to everyone, with the aim of centralizing user data from these different sites. Therefore, it eliminates the need to use multiple links to various different sites to know a person's tastes and to be able to have an overview of all the database sites that the user is a member of, as well as to view their customized lists.",
+  "portfolioproject2title": "Trip Over Time",
+  "portfolioproject2text": "\"Trip Over Time\" (T.O.T) is a 2D adventure game where players navigate through time: Viking past in \"Skyrim,\" present-day Amazon in \"Mowgli,\" and zombie-infested future in \"Paradise.\" Each level features unique enemies and challenges, with a significant boss at the end. Gameplay involves basic keyboard and mouse controls, while sound effects are creatively crafted by the team members. The game offers potential multiplayer modes, mini-games, progression boosts, and controller compatibility, promising diverse and immersive gameplay.",
+  "portfolioproject3title": "ERP ESIEA",
+  "portfolioproject3text": "In the context of my professional experience, I spearheaded the development of an ERP for ESIEA, using Go for the backend and VueJS for the frontend. This initiative enabled the implementation of efficient and effective solutions for various administrative tasks. I was specifically responsible for designing the student management module, which allows detailed and personalized tracking of each student. Data migration from the old ERP to the new one was a significant challenge due to the complexity and volume of data to handle. However, with thorough analysis and careful planning, I successfully carried out the migration without data loss and within the stipulated time frame. This project allowed me to strengthen my Go and VueJS programming skills and familiarize myself with managing large-scale projects."
 }
