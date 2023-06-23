@@ -39,8 +39,8 @@ import {MatMenuModule} from "@angular/material/menu";
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 export function HttpLoaderFactory(http: HttpClient) {
-  //return new TranslateHttpLoader(http, './portfolio-payet-benjamin/assets/i18n/', '.json');
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, './portfolio-payet-benjamin/assets/i18n/', '.json');
+
 }
 
 @NgModule({

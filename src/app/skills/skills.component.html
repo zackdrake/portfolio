@@ -1,7 +1,9 @@
 <div class="skills-container">
   <h2>Skills</h2>
-  <div class="skill" *ngFor="let skill of skills" @fadeIn>
+  <div class="skills-row">
+  <div class="skill" *ngFor="let skill of skills">
     <span>{{ skill.name }}</span>
     <mat-progress-bar [value]="skill.level"></mat-progress-bar>
+  </div>
   </div>
 </div>

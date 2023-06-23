@@ -20,12 +20,11 @@ mat-toolbar {
 
 /* Home component styles */
 .header {
-  text-align: center;
+
   padding: 40px;
 }
 
 .profile-image {
-  max-width: 150px;
   border-radius: 50%;
   margin-bottom: 20px;
 }
